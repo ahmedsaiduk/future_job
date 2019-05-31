@@ -1,7 +1,22 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+join_types = [
+  'software development',
+  'research science',
+  'data science',
+  'blockchain',
+  'product management',
+  'machine learning',
+  'management',
+  'data science',
+  'blockchain',
+  'product management',
+  'machine learning'
+]
+join_types.each_with_index do |v, i|
+  JobPost.create!(
+    title: "job#{i}",
+    description:"Job description#{i}" ,
+    company_name: "company#{i}",
+    company_url: "http://company#{i}.com",
+    join_type: v
+  )
+end
