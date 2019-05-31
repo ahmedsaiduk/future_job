@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2019_05_31_024718) do
     t.text "description"
     t.string "company_name"
     t.string "company_url"
-    t.integer "join_type"
+    t.string "job_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

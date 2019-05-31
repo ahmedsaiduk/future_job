@@ -1,4 +1,4 @@
-join_types = [
+job_types = [
   'software development',
   'research science',
   'data science',
@@ -12,13 +12,13 @@ join_types = [
   'machine learning'
 ]
 
-join_types.each_with_index do |v, i|
+job_types.each_with_index do |v, i|
   i += 1
   JobPost.create!(
     title: "job#{++i}",
     description:"Job description#{i}" ,
     company_name: "company#{i}",
     company_url: "http://company#{i}.com",
-    join_type: v
+    job_type: v
   )
 end

@@ -4,7 +4,13 @@ class JobPostsController < ApplicationController
   # GET /job_posts
   # GET /job_posts.json
   def index
-    @job_posts = JobPost.pagination(page: params[:page])
+    filter = params[:filter]
+    @job_posts = 
+      if filter
+        JobPost.filter_job_type(filter).pagination(page: params[:page])
+      else
+        JobPost.pagination(page: params[:page])
+      end
   end
 
   # GET /job_posts/1
@@ -25,13 +31,13 @@ class JobPostsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_job_post
-      @job_post = JobPost.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_job_post
+    @job_post = JobPost.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def job_post_params
-      params.require(:job_post).permit(:title, :description, :company_name, :company_url, :join_type)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def job_post_params
+    params.require(:job_post).permit(:title, :description, :company_name, :company_url, :job_type)
+  end
 end

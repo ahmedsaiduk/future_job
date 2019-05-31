@@ -5,7 +5,7 @@ class CreateJobPosts < ActiveRecord::Migration[5.2]
       t.text :description
       t.string :company_name
       t.string :company_url
-      t.integer :join_type
+      t.string :job_type
 
       t.timestamps
     end
