@@ -12,6 +12,14 @@ Requirements:
 
 * Docker (optional**) 
 
+* having an enviroment variable to set `username` and `password` for `psql`. set `PG_USERNAME` and `PG_PASSWORD` to that path `app/config/local_env.yml`
+ex:
+```
+PG_USERNAME: 'admin'
+PG_PASSWORD: 'password'
+```
+
+
 Instantiate Application:
 
 * run ` dokcer-compose up` or starting psql server.
