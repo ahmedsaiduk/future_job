@@ -11,9 +11,11 @@ join_types = [
   'product management',
   'machine learning'
 ]
+
 join_types.each_with_index do |v, i|
+  i += 1
   JobPost.create!(
-    title: "job#{i}",
+    title: "job#{++i}",
     description:"Job description#{i}" ,
     company_name: "company#{i}",
     company_url: "http://company#{i}.com",

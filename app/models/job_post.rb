@@ -1,4 +1,5 @@
 class JobPost < ApplicationRecord
+  extend PagedScope #customed paginaion, default 7 per page
   enum join_type: [ 'software development', 'research science', 'data science', 'blockchain', 'product management', 'machine learning', 'management']
 
   # validations
