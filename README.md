@@ -28,6 +28,8 @@ Instantiate Application:
 
 * run ` rails s ` to start the rails server `puma`.
 
+* run `rspec` for test cases.
+
 Test APIs:
 
 #### <a name="post-job_posts"></a>POST /job_posts
