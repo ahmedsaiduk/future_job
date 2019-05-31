@@ -106,7 +106,6 @@ HTTP/1.1 200 Ok
 }
 
 ```
-```
 select job_posts through job_type filter, ex 'software' partial will select all "job_type": "software development".
 
 #### <a name="get-job_posts"></a>GET /job_posts/?filter=""
@@ -117,7 +116,6 @@ curl -X GET http://localhost:3000/job_posts/?filter=software
     -H 'Content-Type: application/json'
  
 ```
-
 ```
 # response
 HTTP/1.1 200 Ok
@@ -153,7 +151,7 @@ HTTP/1.1 200 Ok
 
 ```
 
-```
+
 using pagination, by default each page contain 7 posts.
 pages start from zero
 #### <a name="get-job_posts"></a>GET /job_posts/?page=<number>
