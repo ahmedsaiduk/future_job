@@ -1,5 +1,8 @@
 # README
 
+## Application goal:
+- Building an API application to post a new jobs and list all of them or filtering them by any attribute keys.
+ 
 Please follow this steps to be able to run this project
 
 Requirements:
